@@ -1,6 +1,7 @@
 import logging
 from flexget.entry import Entry
-from flexget.plugin import register_plugin
+from flexget import plugin
+from flexget.event import event
 from flexget.utils.tools import urlopener
 from flexget.utils.soup import get_soup
 from flexget.utils.search import torrent_availability
@@ -36,4 +37,6 @@ class SearchTC(object):
 
     return results
 
-register_plugin(SearchTC, 'search_tehconnection', groups=['search'], debug=True)
+@event('plugin.register')
+def register_plugin():
+  plugin.register(SearchTC, 'search_tehconnection', groups=['search'], debug=True)
