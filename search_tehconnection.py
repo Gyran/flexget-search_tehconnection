@@ -39,4 +39,4 @@ class SearchTC(object):
 
 @event('plugin.register')
 def register_plugin():
-  plugin.register(SearchTC, 'search_tehconnection', groups=['search'], debug=True)
+  plugin.register(SearchTC, 'search_tehconnection', groups=['search'], api_ver=2, debug=True)
