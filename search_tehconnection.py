@@ -9,7 +9,7 @@ from flexget.utils.search import torrent_availability
 log = logging.getLogger('search_tehconnection')
 
 class SearchTC(object):
-  def search(self, entry, config):
+  def search(self, task, entry, config):
     url = "https://tehconnection.eu/torrents.php?searchstr=%s" \
       % entry.get("imdb_id");
 
