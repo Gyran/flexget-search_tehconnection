@@ -23,5 +23,4 @@ tasks:
         - movie_list: my list
       from:
         - search_tehconnection: yes
-    movie_queue: yes
 ```
