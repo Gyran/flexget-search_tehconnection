@@ -20,7 +20,7 @@ tasks:
       password: tehconnection password
     discover:
       what:
-        - emit_movie_queue: yes
+        - movie_list: my list
       from:
         - search_tehconnection: yes
     movie_queue: yes
