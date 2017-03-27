@@ -10,7 +10,7 @@ log = logging.getLogger('search_tehconnection')
 
 class SearchTC(object):
   def search(self, task, entry, config=None):
-    url = "https://tehconnection.eu/torrents.php?searchstr=" + entry["imdb_id"];
+    url = "https://tehconnection.eu/torrents.php?torrentname=" + entry["imdb_id"];
     page = task.requests.get(url).content
     soup = get_soup(page)
 
